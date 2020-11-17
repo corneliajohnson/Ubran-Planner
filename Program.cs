@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Planner
 {
@@ -23,15 +24,22 @@ namespace Planner
       OneTwoThree.Purchase("Chelsy Thomas");
 
       City tallahassee = new City("Tallahassee");
-      tallahassee.Mayor("John Doe");
-      Console.WriteLine(tallahassee.MayorName());
+      tallahassee.Mayor("Mike Towns");
+      tallahassee.Year(1991);
+      tallahassee.AddBuilding(FiveOneTwoEigth);
+      tallahassee.AddBuilding(OneTwoThree);
+
+      foreach (Building building in tallahassee.Buildings)
+      {
+        DisplayTemplate(building);
+      }
     }
 
     static void DisplayTemplate(Building building)
     {
       Console.WriteLine($@"
 {building.BuildingAdress()}
--------------- -
+---------------
 Designed by {building.DesignerName()}
 Constructed on {building.DateCompleted()}
 Owned by {building.OwnerName()}

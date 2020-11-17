@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 
-
 namespace Planner
 {
   public class City
@@ -8,6 +7,7 @@ namespace Planner
     private string _cityName;
     private string _mayor;
     private int _yearEst;
+    public List<Building> Buildings = new List<Building>();
     public City(string cityName)
     {
       _cityName = cityName;
@@ -16,7 +16,7 @@ namespace Planner
     {
       _mayor = mayor;
     }
-    public void YearEst(int yearEst)
+    public void Year(int yearEst)
     {
       _yearEst = yearEst;
     }
@@ -28,9 +28,13 @@ namespace Planner
     {
       return _mayor;
     }
-    public int Year()
+    public int YearEst()
     {
       return _yearEst;
+    }
+    public void AddBuilding(Building building)
+    {
+      Buildings.Add(building);
     }
   }
 }
