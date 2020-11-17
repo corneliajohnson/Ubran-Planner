@@ -22,8 +22,9 @@ namespace Planner
       OneTwoThree.Construct();
       OneTwoThree.Purchase("Chelsy Thomas");
 
-      DisplayTemplate(FiveOneTwoEigth);
-      DisplayTemplate(OneTwoThree);
+      City tallahassee = new City("Tallahassee");
+      tallahassee.Mayor("John Doe");
+      Console.WriteLine(tallahassee.MayorName());
     }
 
     static void DisplayTemplate(Building building)
