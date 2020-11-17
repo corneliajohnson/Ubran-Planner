@@ -5,7 +5,7 @@ namespace Planner
   public class Building
   {
     //private fields
-    private string _designer = "Cornelia";
+    private string _designer = "Cornelia Johnson";
     private DateTime _dateConstructed;
     private string _address;
     private string _owner;
@@ -40,5 +40,25 @@ namespace Planner
       _owner = person;
     }
 
+    //Information needed for display
+    public string OwnerName()
+    {
+      return _owner;
+    }
+
+    public string BuildingAdress()
+    {
+      return _address;
+    }
+
+    public string DesignerName()
+    {
+      return _designer;
+    }
+
+    public DateTime DateCompleted()
+    {
+      return _dateConstructed;
+    }
   }
 }
